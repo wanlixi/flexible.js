@@ -41,9 +41,9 @@ module.exports = function(designWidth, maxWidth) {
 		}, false);
 	}
 };
-```
-
-具体使用：全局注入
+``` 
+## 已经发布在 npm 上 可以使用 npm i --save flexible.js 下载
+### 具体使用：全局注入
 lib.js
 ```
 require('flexible')(640, 640)
