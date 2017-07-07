@@ -1,19 +1,9 @@
 # flexible.js
 移动端适配问题
 ```
-//author：wanlixin
-//website:http://yuanxiaodie.com
-//兼容UC竖屏转横屏出现的BUG
-//自定义设计稿的宽度：designWidth
-//最大宽度:maxWidth
-
+// designWidth: 设计稿的宽度  maxWidth: 最大宽度
 module.exports = function(designWidth, maxWidth) {
-	var doc = document,
-	win = window,
-	docEl = doc.documentElement,
-	remStyle = document.createElement("style"),
-	tid;
-
+	var doc = document, win = window, docEl = doc.documentElement, remStyle = document.createElement("style"), tid;
 	function refreshRem() {
 		var width = docEl.getBoundingClientRect().width;
 		maxWidth = maxWidth || 540;
@@ -21,7 +11,6 @@ module.exports = function(designWidth, maxWidth) {
 		var rem = width * 100 / designWidth;
 		remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
 	}
-
 	if (docEl.firstElementChild) {
 		docEl.firstElementChild.appendChild(remStyle);
 	} else {
@@ -32,7 +21,6 @@ module.exports = function(designWidth, maxWidth) {
 	}
 	//要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
 	refreshRem();
-
 	win.addEventListener("resize", function() {
 		clearTimeout(tid); //防止执行两次
 		tid = setTimeout(refreshRem, 300);
@@ -52,8 +40,7 @@ module.exports = function(designWidth, maxWidth) {
 			doc.body.style.fontSize = "16px";
 		}, false);
 	}
-});
-
+};
 ```
 
 具体使用：全局注入
