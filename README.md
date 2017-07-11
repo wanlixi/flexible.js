@@ -46,8 +46,9 @@ module.exports = function(designWidth, maxWidth) {
 ### 具体使用：全局注入
 lib.js
 ```
-require('flexible')(640, 640)
+假设设计稿宽度是 375
+require('flexible')(750, 640)
 ```
 在vscode编辑器里面设置：
 ### ctrl + ，###
-搜索 rem ，然后找到"cssrem.rootFontSize" 将其改为65（也可以根据需要设置）
+搜索 rem ，然后找到"cssrem.rootFontSize" 将其改为48（也可以根据需要设置）
