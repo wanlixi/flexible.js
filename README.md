@@ -49,6 +49,9 @@ lib.js
 假设设计稿宽度是 375
 require('flexible')(750, 640)
 ```
-在vscode编辑器里面设置：
+### 在vscode编辑器里面设置：
 ### ctrl + ，###
 搜索 rem ，然后找到"cssrem.rootFontSize" 将其改为48（也可以根据需要设置）
+
+### 在sublime text下配置：
+https://github.com/wanlixi/cssrem
