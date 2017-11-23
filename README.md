@@ -35,8 +35,8 @@ flexible();
 <br /><br />
 或者
 <br /><br />
-require('flexible.js')()
 <code>
+require('flexible.js')()
 </code>
 <br />
 <small>注意因为移动端的设计稿通常是按照iphone6的尺寸，即750   * 1334，所以我在封装的时候内部设默认置的第一个参数即设计稿尺寸为750，第二个参数为最大宽度，默认设置的是640，	即没有兼容到ipad等大屏幕设备，你们在开发中可以结合实际的情况自己传入对应的参数即可！</small>
