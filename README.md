@@ -1,57 +1,45 @@
 # flexible.js
 移动端适配问题
-```
-// designWidth: 设计稿的宽度  maxWidth: 最大宽度
-module.exports = function(designWidth, maxWidth) {
-	var doc = document, win = window, docEl = doc.documentElement, remStyle = document.createElement("style"), tid;
-	function refreshRem() {
-		var width = docEl.getBoundingClientRect().width;
-		maxWidth = maxWidth || 540;
-		width > maxWidth && (width = maxWidth);
-		var rem = width * 100 / designWidth;
-		remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
-	}
-	if (docEl.firstElementChild) {
-		docEl.firstElementChild.appendChild(remStyle);
-	} else {
-		var wrap = doc.createElement("div");
-		wrap.appendChild(remStyle);
-		doc.write(wrap.innerHTML);
-		wrap = null;
-	}
-	//要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
-	refreshRem();
-	win.addEventListener("resize", function() {
-		clearTimeout(tid); //防止执行两次
-		tid = setTimeout(refreshRem, 300);
-	}, false);
+<h1>可以在各种全家桶项目的入口文件中引入:</h1>
+<br />
+<h3>首先安装flexible.js</h3>
+<br />
+<code>npm i -S flexible.js</code>
+<br />
+or
+<br />
 
-	win.addEventListener("pageshow", function(e) {
-		if (e.persisted) { // 浏览器后退的时候重新计算
-			clearTimeout(tid);
-			tid = setTimeout(refreshRem, 300);
-		}
-	}, false);
+<h3>如果npm安装比较慢的话，使用淘宝镜像cnpm安装</h3>
+<br />
+<h4>先在命令行工具里面输入：</h4>
+<br />
+<code>npm install -g cnpm –registry=https://registry.npm.taobao.org</code>
+<br /><br />
+<h4>成功之后输入：</h4>
+<br /><br />
+<code>cnpm i -S flexible.js</code>
+<br /><br />
+<h4>找到目录</h4>
+<br /><br />
+<code>
+src/main.js
+</code>
+<br /><br />
+<code>
+import flexible form 'flexible.js'
+<br /><br />
+flexible();
 
-	if (doc.readyState === "complete") {
-		doc.body.style.fontSize = "16px";
-	} else {
-		doc.addEventListener("DOMContentLoaded", function(e) {
-			doc.body.style.fontSize = "16px";
-		}, false);
-	}
-};
-``` 
-## 已经发布在 npm 上 可以使用 npm i --save flexible.js 下载
-### 具体使用：全局注入
-lib.js
-```
-假设设计稿宽度是 375
-require('flexible')(750, 640)
-```
-### 在vscode编辑器里面设置：
-### ctrl + ，###
-搜索 rem ，然后找到"cssrem.rootFontSize" 将其改为48（也可以根据需要设置）
-
-### 在sublime text下配置：
-https://github.com/wanlixi/cssrem
+</code>
+<br /><br />
+or
+<br /><br />
+<code>
+</code>
+<br />
+<small>注意因为移动端的设计稿通常是按照iphone6的尺寸，即750   * 1334，所以我在封装的时候内部设默认置的第一个参数即设计稿尺寸为750，第二个参数为最大宽度，默认设置的是640，	即没有兼容到ipad等大屏幕设备，你们在开发中可以结合实际的情况自己传入对应的参数即可！</small>
+<br />
+<h2>
+	如果您使用的sublime编辑器，可以下载插件remunit，如果您使用的是vscode编辑器，可以下载插件cssrem，两个都需要配置：50基数，即：
+  ```font-size：1rem；/*50px*/```
+</h2>
