@@ -43,6 +43,6 @@ require('flexible.js')()
 <br />
 <h2>
 	如果您使用的sublime编辑器，可以下载插件remunit，如果您使用的是vscode编辑器，可以下载插件cssrem，两个都需要配置：50基数，即：
-	<br />
+	<br /><br /><br />
   <code>font-size：1rem；/*50px*/</code>
 </h2>
