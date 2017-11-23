@@ -1,12 +1,13 @@
 # flexible.js
 移动端适配问题
+<br />
 <h1>可以在各种全家桶项目的入口文件中引入:</h1>
 <br />
 <h3>首先安装flexible.js</h3>
 <br />
 <code>npm i -S flexible.js</code>
 <br />
-or
+或者
 <br />
 
 <h3>如果npm安装比较慢的话，使用淘宝镜像cnpm安装</h3>
@@ -32,8 +33,9 @@ flexible();
 
 </code>
 <br /><br />
-or
+或者
 <br /><br />
+require('flexible.js')()
 <code>
 </code>
 <br />
