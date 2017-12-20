@@ -27,7 +27,7 @@ src/main.js
 </code>
 <br /><br />
 <code>
-import flexible form 'flexible.js'
+import flexible from 'flexible.js'
 <br /><br />
 flexible();
 
