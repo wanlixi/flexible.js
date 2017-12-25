@@ -1,4 +1,5 @@
 # flexible.js
+![](https://img.shields.io/cocoapods/l/Alamofire.svg?style=flat)
 移动端适配问题
 <br />
 <h1>可以在各种全家桶项目的入口文件中引入:</h1>
