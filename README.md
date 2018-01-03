@@ -31,6 +31,7 @@ src/main.js
 <code>
 import flexible from 'flexible.js'
 </code>
+<br /><br />
 <code>flexible();</code>
 
 </code>
