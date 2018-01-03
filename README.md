@@ -27,6 +27,7 @@
 src/main.js
 </code>
 <br /><br />
+<h3>ES6 Module</h3>
 <code>
 import flexible from 'flexible.js'
 <br /><br />
@@ -34,7 +35,7 @@ flexible();
 
 </code>
 <br /><br />
-或者
+<h3>或者 AMD/CMD</h3>
 <br /><br />
 <code>
 require('flexible.js')()
