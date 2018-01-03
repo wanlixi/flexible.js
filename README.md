@@ -29,8 +29,9 @@ src/main.js
 <br /><br />
 <h3>ES6 Module</h3>
 <code>
-	<p>import flexible from 'flexible.js'</p>
-	<p>flexible();</p>
+import flexible from 'flexible.js'
+</code>
+<code>flexible();</code>
 
 </code>
 <br /><br />
